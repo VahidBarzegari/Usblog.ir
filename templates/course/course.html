@@ -6,7 +6,7 @@
 {% block meta_description %}{{course.description|safe|striptags|truncatewords:30}}{% endblock %}
 {% block meta_author %}{% if course.author.get_full_name %}{{course.author.get_full_name}}{% else %}{{course.author}}{% endif %}{% endblock %}
 {% block meta_title %}{{course.title}}{% endblock %}
-{% block meta_canonical %}https://silicium.ir/courses/{{course.slug}}/{% endblock %}
+{% block meta_canonical %}https://usblog.ir/courses/{{course.slug}}/{% endblock %}
 {% block meta_own %}{% endblock %}
 
 {% block main %}

@@ -7,7 +7,7 @@
 {% block meta_description %}{{object.description|safe|striptags|truncatewords:30}}{% endblock %}
 {% block meta_author %}{% if object.author.get_full_name %}{{object.author.get_full_name}}{% else %}{{object.author}}{% endif %}{% endblock %}
 {% block meta_title %}{{object.title}}{% endblock %}
-{% block meta_canonical %}https://silicium.ir/articles/{{object.slug}}/{% endblock %}
+{% block meta_canonical %}https://useblog.ir/articles/{{object.slug}}/{% endblock %}
 {% block meta_own %}{% endblock %}
 
 {% block top_massages %}
@@ -199,7 +199,7 @@
 							<div class="alert alert-danger">
 								برای ارسال نظر وارد شوید: <strong><a style="color: #fff" href="{% url 'social:begin' 'google-oauth2' %}?next={{request.path}}">ورود</a></strong>
 							</div>
-						{% endif %}
+						{% endif %}Tarif
 					{% endif %}
 				</div>
 			</div>

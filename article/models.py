@@ -132,7 +132,7 @@ class Comment(models.Model):
 		if self.article and self.user and self.content and not self.author and not self.answer and not self.status:
 			email = EmailMessage(
 				"دیدگاه جدید",
-				"<p style='direction: rtl;text-align: right;'>سلام، دیدگاه جدیدی برای مقاله ات هست: <a href='https://silicium.ir/admin/article/comment/?article__author__id__exact={}&status__exact=0'>مشاهده</a></p>".format(self.article.author.pk),
+				"<p style='direction: rtl;text-align: right;'>سلام، دیدگاه جدیدی برای مقاله ات هست: <a href='https://usblog.ir/admin/article/comment/?article__author__id__exact={}&status__exact=0'>مشاهده</a></p>".format(self.article.author.pk),
 				to=[self.article.author.email]
 			)
 			email.content_subtype = "html"
@@ -140,7 +140,7 @@ class Comment(models.Model):
 		elif self.article and self.user and self.content and self.status and (not self.author or not self.answer):
 			email = EmailMessage(
 				"دیدگاه شما تایید شد (:",
-				"<p style='direction: rtl;text-align: right;'>سلام، دیدگاه شما که مدتی قبل برامون نوشته بودید، تایید شد: <a href='https://silicium.ir{}'>مشاهده</a><br>ممنون از دیدگاهتون</p>".format(reverse("article:detail", kwargs={'slug': self.article.slug})),
+				"<p style='direction: rtl;text-align: right;'>سلام، دیدگاه شما که مدتی قبل برامون نوشته بودید، تایید شد: <a href='https://usblog.ir{}'>مشاهده</a><br>ممنون از دیدگاهتون</p>".format(reverse("article:detail", kwargs={'slug': self.article.slug})),
 				to=[self.user.email]
 			)
 			email.content_subtype = "html"
@@ -148,7 +148,7 @@ class Comment(models.Model):
 		elif self.article and self.user and self.content and self.status and self.author and self.answer:
 			email = EmailMessage(
 				"به دیدگاه شما پاسخ دادیم (:",
-				"<p style='direction: rtl;text-align: right;'>سلام، دیدگاه شما که مدتی قبل برامون نوشته بودید، تایید شد و بهش پاسخ دادیم: <a href='https://silicium.ir{}'>مشاهده</a><br>ممنون از دیدگاهتون</p>".format(reverse("article:detail", kwargs={'slug': self.article.slug})),
+				"<p style='direction: rtl;text-align: right;'>سلام، دیدگاه شما که مدتی قبل برامون نوشته بودید، تایید شد و بهش پاسخ دادیم: <a href='https://usblog.ir{}'>مشاهده</a><br>ممنون از دیدگاهتون</p>".format(reverse("article:detail", kwargs={'slug': self.article.slug})),
 				to=[self.user.email]
 			)
 			email.content_subtype = "html"

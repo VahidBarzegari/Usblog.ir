@@ -4,9 +4,9 @@
 {% load humanize %}
 
 {% block meta_description %}{% if not category %}اینجا سعی کردیم براتون آخرین و به‌روزترین مقالات و آموزش ها رو در حیطه برنامه نویسی و کامپیوتر گردآوری کنیم (:{% else %}اینجا میتونید آخرین مقالاتمون در دسته‌بندی {{category.title}} رو مطالعه کنید (:{% endif %}{% endblock %}
-{% block meta_author %}Mehran Tarif{% endblock %}
+{% block meta_author %}Vahid Barzegari{% endblock %}
 {% block meta_title %}{% if not category %}لیست مقالات{% else %}دسته‌بندی {{category.title}}{% endif %}{% endblock %}
-{% block meta_canonical %}https://silicium.ir/{% if not category %}articles/{% else %}category/{{category.slug}}/{% endif %}{% endblock %}
+{% block meta_canonical %}https://usblog.ir/{% if not category %}articles/{% else %}category/{{category.slug}}/{% endif %}{% endblock %}
 {% block meta_own %}{% endblock %}
 
 {% block main %}
